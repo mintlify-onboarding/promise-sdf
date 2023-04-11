@@ -59,8 +59,15 @@
       "pages": ["docs/examples/hello_world"]
     },
     {
-      "group": "",
-      "pages": ["", ""]
+      "group": "Reference",
+      "pages": [
+        "docs/reference/1-sdf-cli",
+        "docs/reference/2-das-yml",
+        "docs/reference/3-classifier-yml",
+        "docs/reference/4-policies-yml",
+        "docs/reference/5-workspace-yml",
+        "docs/reference/6-sdf-yml"
+      ]
     },
     {
       "group": "",

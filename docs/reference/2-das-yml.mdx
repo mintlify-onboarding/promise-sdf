@@ -1,0 +1,122 @@
+---
+title: "Data Asset Schema"
+---
+
+A _source_`.das.yml` file can provide additional metadata for any _source_`.sql`
+file. A `.das` file can provide
+
+- metadata for tables, e.g.
+  - documentation
+  - query variables
+  - schedule and startdate
+  - partition info
+  - store, retention and purpose classifiers
+- metadata to columns, e.g.
+  - documentation
+  - column data classifiers
+
+## Example: Using DAS to attach table and column classifiers
+
+Let us define a simple table T (authored in T.sql) with 2 columns.
+
+```sql
+select * from (values ('wolfram',1)) as t(uid, cost);
+```
+
+We provide a `t.das.yml` file, to label column `uid` with a data classifier
+`PII` and the table with a purpose classifier `test`. We write:
+
+```yaml
+schemas:
+  schema:
+    name: t
+    columns:
+      - name: uid
+        data-classifier:
+          - PII
+    purpose-classifier:
+      - test
+```
+
+Classifiers are automatically propagated through dependencies. They can be
+checked and/or enforced using privacy policies.
+
+The Data Asset Schema is rigidly defined by a json schema
+**[data_asset.schema.json](https://github.com/promise-labs/sdf-cli/blob/main/sdf-schemas/data_asset.schema.json)**.
+Here is its quintessence:
+
+### Root Element: `schemas`
+
+JSON schema for SDF data asset.
+
+```yml
+schemas:
+  # A root element defines a set of named schema
+  required schemas: array of schema
+```
+
+### Nested Element: `schema`
+
+A schema element defines its name, columns, etc.
+
+```yaml
+schema:
+  # The name of this schema [written: 'catalog.schema.table']
+  required name: string
+  # Description of this schema
+  doc: string
+  # The columns of the schema: name, type, metadata
+  columns: array of column
+  # Partition info: an array of column names
+  partitioned-by: array of partition-info
+  # Format of the dataset [one of 'parquet', 'csv', 'json']
+  file-format: string
+  # Materialization of the dataset.
+  materialization: view|ephemeral|table|external
+  # Location of your dataset [an absolute, workspace-relative path or s3-path].
+  location: string
+  # Insert partition into this 'catalog.schema.table'
+  insert-into: string
+  # The store (label) of the schema [defined in 'store.classifier.yml']
+  store-classifier: array of string
+  # The purpose (label) of the schema [defined in 'purpose.classifier.yml']
+  purpose-classifier: array of string
+  # The variables appearing in the query defining the schema
+  vars: array of string
+  # The schedule of this schema [uses cron expression, e.g. every hour 0 * * * *]
+  schedule: string
+  # Run schedule starting on this day and time [uses RFC-3339 date or datetime]
+  starting: string
+  # Table metadata, a list of labels [obsolete]
+  metadata: array of string
+```
+
+### Nested Element: `column`
+
+A column element defines its name, type, metadata.
+
+```yaml
+# The name of the column
+required name: string
+# Explanation of this artifact
+doc: string
+# Data types for a column [one of SQL's types: integer, varchar, etc.]
+datatype: string
+# Is the column nullable (yes or no)
+nullable: string
+# A list of classification labels [defined in 'data.classifier.yml']
+data-classifier: array of string
+# Column metadata, a list of labels [Obsolete -- use data-classifier]
+metadata: array of string
+```
+
+### Nested Element: `partition-info`
+
+A partition info element defines its name, external format, etc..
+
+```yaml
+# The name of the partition column
+required name: string
+# The format of the partition column [use strftime format for date/time]
+format: string
+```

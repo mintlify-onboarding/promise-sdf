@@ -1,37 +1,42 @@
 ---
-sidebar_position: 4
+title: "Policy Schema"
 ---
 
-# Policy Schema
-
-<!-- 
 ## Examples
-### Individual Policies
-#### Data Classification
-#### Roles
-#### Purposes
-#### Storage seperation
-### Composite Policies
-### A Company Privacy Policy
-### GDPR
-### HIPPA
+
+<AccordionGroup>
+  <Accordion title="Individual Policies" />
+  <Accordion title="Data Classification" />
+  <Accordion title="Roles" />
+  <Accordion title="Purposes" />
+  <Accordion title="Storage seperation" />
+  <Accordion title="Composite Policies" />
+  <Accordion title="A Company Privacy Policy" />
+  <Accordion title="GDPR" />
+  <Accordion title="HIPPA" />
+</AccordionGroup>
 
 ## The Schema Definition -->
+
 Policies are rigidly defined a json schema
-**[policy.schema.json](
-https://github.com/promise-labs/sdf-cli/blob/main/sdf-schemas/policy.schema.json)**.
+**[policy.schema.json](https://github.com/promise-labs/sdf-cli/blob/main/sdf-schemas/policy.schema.json)**.
 Here is its quintessence:
 
-
 ### Root Element: `policy`
-JSON schema for SDF policy files -- note that a policy should have only one root element which is either allow or deny.
+
+JSON schema for SDF policy files -- note that a policy should have only one root
+element which is either allow or deny.
+
 ```yml
 policy:
   deny: deny_clause
   allow: allow_clause
 ```
+
 ### Nested Element: `deny_clause`
+
 Deny access when these labels are present.
+
 ```yaml
   # A list of store labels [defined in 'store.classifier.yml']
   store: array of string
@@ -42,11 +47,14 @@ Deny access when these labels are present.
   # A list of data classifier labels [defined in 'data.classifier.yml']
   data: array of string
   # EXCEPT for these conditions...
-  except: array of 
+  except: array of
     required allow: allow_clause
 ```
+
 ### Nested Element: `allow_clause`
+
 Allow access when these labels are present.
+
 ```yaml
   # A list of store labels [defined in 'store.classifier.yml']
   store: array of string
@@ -57,7 +65,6 @@ Allow access when these labels are present.
   # A list of data classifier labels [defined in 'data.classifier.yml']
   data: array of string
   # EXCEPT for these conditions...
-  except: array of 
+  except: array of
     required deny: deny_clause
 ```
-
