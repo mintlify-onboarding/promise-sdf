@@ -1,8 +1,8 @@
 {
   "name": "Promise",
   "logo": {
-    "dark": "/logo/promise.svg",
-    "light": "/logo/promise.svg"
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
