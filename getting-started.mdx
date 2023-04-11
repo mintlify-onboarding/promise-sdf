@@ -75,7 +75,7 @@ After running the command, you should see the following output:
 This will create a new directory with the name of your project. In this case,
 that's `hello_world`. The directory will contain an `workspace.sdf.yml` file,
 which is the main configuration file for your project. For more on this, see our
-[workspaces guide](guide/workspace). Your new directory will also contain a
+[workspaces guide](/guide/workspaces). Your new directory will also contain a
 `src` directory with a `main.sdf` file, which is the entry point for your
 project and the sql file we'll be statically analyzing and executing locally.
 Next, let's take a deeper look at your project.
@@ -83,11 +83,10 @@ Next, let's take a deeper look at your project.
 ## Exploring Your Project
 
 Next we'll run two core commands in SDF:
-[sdf describe](/guide/sdf_cli_2_basics#sdf-describe) and
-[sdf build](/guide/sdf_cli_2_basics#sdf-build). Describing our project will
-_statically_ analyze the query and tell you about the table schemas and
-column-level lineage. Building will run the query locally right on your machine.
-Let's give it a go.
+[sdf describe](/guide/basics#sdf-describe) and
+[sdf build](/guide/basics#sdf-build). Describing our project will _statically_
+analyze the query and tell you about the table schemas and column-level lineage.
+Building will run the query locally right on your machine. Let's give it a go.
 
 First we'll try `sdf describe`
 
@@ -143,6 +142,5 @@ lake or warehouse, and we'd do some clever sampling work to cache the data
 locally so you could work with it fully local and offline.
 
 In this guide we showed you just how easy it is to install SDF and run your
-first query. Next you can move on to our
-[SDF Basics](/docs/guide/sdf_cli_2_basics) guide to learn more about the SDF CLI
-and learn how to work with real data.
+first query. Next you can move on to our [SDF Basics](/guide/basics) guide to
+learn more about the SDF CLI and learn how to work with real data.

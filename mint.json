@@ -46,42 +46,42 @@
     {
       "group": "Guides",
       "pages": [
-        "docs/guide/sdf_cli_1_install",
-        "docs/guide/sdf_cli_2_basics",
-        "docs/guide/sdf_cli_3_io",
-        "docs/guide/sdf_cli_4_workspaces",
-        "docs/guide/sdf_cli_5_schedules",
-        "docs/guide/sdf_cli_6_lineage_metadata"
+        "guide/install",
+        "guide/basics",
+        "guide/io",
+        "guide/workspaces",
+        "guide/schedules",
+        "guide/lineage_metadata"
       ]
     },
     {
       "group": "Examples",
-      "pages": ["docs/examples/hello_world"]
+      "pages": ["examples/hello_world"]
     },
     {
       "group": "Reference",
       "pages": [
-        "docs/reference/1-sdf-cli",
-        "docs/reference/2-das-yml",
-        "docs/reference/3-classifier-yml",
-        "docs/reference/4-policies-yml",
-        "docs/reference/5-workspace-yml",
-        "docs/reference/6-sdf-yml"
+        "reference/sdf-cli",
+        "reference/das-yml",
+        "reference/classifier-yml",
+        "reference/policies-yml",
+        "reference/workspace-yml",
+        "reference/sdf-yml"
       ]
     },
     {
       "group": "SQL Functions",
       "pages": [
-        "docs/sql-functions/aggregate_functions",
-        "docs/sql-functions/math_functions",
-        "docs/sql-functions/other_expressions",
-        "docs/sql-functions/string_functions",
-        "docs/sql-functions/temporal_functions"
+        "sql-functions/aggregate_functions",
+        "sql-functions/math_functions",
+        "sql-functions/other_expressions",
+        "sql-functions/string_functions",
+        "sql-functions/temporal_functions"
       ]
     },
     {
       "group": "Service",
-      "pages": ["docs/service/billing", "docs/service/status"]
+      "pages": ["service/billing", "service/status"]
     }
   ],
   "footerSocials": {
