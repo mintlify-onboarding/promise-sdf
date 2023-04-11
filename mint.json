@@ -1,0 +1,71 @@
+{
+  "name": "Promise",
+  "logo": {
+    "dark": "/logo/promise.svg",
+    "light": "/logo/promise.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#47A0F0",
+    "light": "#8CC9FF",
+    "dark": "#2251CA",
+    "anchors": { "from": "#4C92EB", "to": "#4040F5" }
+  },
+  "topbarLinks": [
+    {
+      "name": "Sign In",
+      "url": "https://www.promise.xyz/"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://www.promise.xyz/"
+  },
+  "anchors": [
+    {
+      "name": "API Reference",
+      "icon": "rectangle-terminal",
+      "url": "api-reference"
+    },
+    {
+      "name": "Changelog",
+      "icon": "list",
+      "url": "https://www.promise.xyz/"
+    },
+    {
+      "name": "Community",
+      "icon": "comments",
+      "url": "https://www.promise.xyz/"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Introduction",
+      "pages": ["intro", "getting-started"]
+    },
+    {
+      "group": "Guides",
+      "pages": ["", ""]
+    },
+    {
+      "group": "",
+      "pages": ["", ""]
+    },
+    {
+      "group": "",
+      "pages": ["", ""]
+    },
+    {
+      "group": "",
+      "pages": ["", ""]
+    },
+    {
+      "group": "",
+      "pages": ["", ""]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/promise_labs",
+    "linkedin": "https://www.linkedin.com/company/promiselabs/about/"
+  }
+}
