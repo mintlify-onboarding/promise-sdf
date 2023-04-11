@@ -1,50 +1,49 @@
 ---
-sidebar_position: 1
+title: "Installation"
+description:
+  "SDF is a static analysis tool for data warehouses written in Rust. No JVM
+  required"
 ---
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import CodeBlock from '@theme/CodeBlock';
-
-# Installation
-
-SDF is a static analysis tool for data warehouses written in Rust. No JVM required
-
-
 
 ## Prerequisites
-SDF is currently supported on the following platforms. The executable is small (<50mb), but heavily parallelized. As such, SDF's resource consumption is dependent entirely on your data processing requirements.
 
-| Platforms                   | Supported |
-|-----------------------------|:---------:|
-| Linux Intel X86-64          |     ✔️     |
-| Linux Arm AARCH-64          |     ✔️     |
-| Apple Intel X86-64          |     ✔️     |
-| Apple Arm AARCh-64          |     ✔️     |
-| Windows Intel X86-64        |    ❌     |
-| Web-Assembly                |    ❌     |
+SDF is currently supported on the following platforms. The executable is small
+(\<50mb), but heavily parallelized. As such, SDF's resource consumption is
+dependent entirely on your data processing requirements.
 
-For a complete list of releases, please see the official [github releases page](https://github.com/promise-labs/sdf-cli/releases).
+| Platforms            | Supported |
+| -------------------- | :-------: |
+| Linux Intel X86-64   |    ✔️     |
+| Linux Arm AARCH-64   |    ✔️     |
+| Apple Intel X86-64   |    ✔️     |
+| Apple Arm AARCh-64   |    ✔️     |
+| Windows Intel X86-64 |    ❌     |
+| Web-Assembly         |    ❌     |
 
-:::tip
-SDF is hardware optimized. For best performance, download the version that matches your chipset.
-:::
+For a complete list of releases, please see the official
+[github releases page](https://github.com/promise-labs/sdf-cli/releases).
 
+<Tip>
+  SDF is hardware optimized. For best performance, download the version that
+  matches your chipset.
+</Tip>
 
 ## Installing SDF
+
 <Tabs>
-  <TabItem value="bin" label="Binary Download">
-    Our install script will first check your operating system and architecture, then install the latest version of SDF and its dependencies for your system. The `sdf` command will also be added to your path.<div style={{marginBottom: '15px'}}/>
-    <CodeBlock language="shell">
-        curl -LSfs https://cdn.sdf.com/releases/download/install.sh | bash -s 
-    </CodeBlock>
-  </TabItem>
+  <Tab title="Binary Download">
+    Our install script will first check your operating system and architecture,
+    then install the latest version of SDF and its dependencies for your system.
+    The `sdf` command will also be added to your path. ```bash curl -LSfs
+    https://cdn.sdf.com/releases/download/install.sh | bash -s ```
+  </Tab>
 </Tabs>
 
 ### Verify Installation
 
 To verify that SDF is installed correctly, run the following command:
 
-```shell
+```bash
 SDF's modular SQL
 
 Usage: sdf <COMMAND>
@@ -65,24 +64,31 @@ Commands:
 Options:
   -h, --help     Print help
   -V, --version  Print version
-
 ```
-## SDF Versions and Updating
-From time to time, it may be necessary to update the cli to get the latest and greatest features, or to connect to SDF Cloud Services.
 
-If you've already installed SDF, you can update to the latest version by running the command below. By default, this will update to the latest version of the cli. But, you can also pass `--version` and `--install-location` parameters.
-```_run shell
+## SDF Versions and Updating
+
+From time to time, it may be necessary to update the cli to get the latest and
+greatest features, or to connect to SDF Cloud Services.
+
+If you've already installed SDF, you can update to the latest version by running
+the command below. By default, this will update to the latest version of the
+cli. But, you can also pass `--version` and `--install-location` parameters.
+
+```bash
 $sdf update
 ```
 
 You can check the version of your current CLI with
-```shell
-sdf 0.0.94-dev
 
+```bash
+sdf 0.0.94-dev
 ```
 
 ## Uninstalling SDF
+
 If you ever need to uninstall SDF, run
-```_run shell
+
+```bash
 $sdf uninstall
 ```

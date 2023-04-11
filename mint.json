@@ -45,11 +45,18 @@
     },
     {
       "group": "Guides",
-      "pages": ["", ""]
+      "pages": [
+        "docs/guide/sdf_cli_1_install",
+        "docs/guide/sdf_cli_2_basics",
+        "docs/guide/sdf_cli_3_io",
+        "docs/guide/sdf_cli_4_workspaces",
+        "docs/guide/sdf_cli_5_schedules",
+        "docs/guide/sdf_cli_6_lineage_metadata"
+      ]
     },
     {
-      "group": "",
-      "pages": ["", ""]
+      "group": "Examples",
+      "pages": ["docs/examples/hello_world"]
     },
     {
       "group": "",

@@ -1,7 +1,0 @@
-*.md
-!raw/*.md
-
-*.mdx
-!raw/*.mdx
-
-!hello_world.md
