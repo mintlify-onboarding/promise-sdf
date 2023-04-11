@@ -26,11 +26,11 @@ description:
 
 To verify that SDF is installed correctly, run the following command:
 
-```bash shell
+```bash
 sdf --help
 ```
 
-```bash shell
+```bash
 SDF's modular SQL
 
 Usage: sdf <COMMAND>
@@ -59,13 +59,13 @@ For more on installing SDF, see [Install SDF](/guide/install).
 
 To create a new project, run the following command:
 
-```bash shell
+```bash
 sdf new hello_world
 ```
 
 After running the command, you should see the following output:
 
-```bash shell
+```bash
     Created hello_world/.gitignore
     Created hello_world/src/main.sql
     Created hello_world/workspace.sdf.yml
@@ -91,11 +91,11 @@ Let's give it a go.
 
 First we'll try `sdf describe`
 
-```bash shell
+```bash
 sdf describe
 ```
 
-```bash shell
+```bash
   Analyzing hello_world.pub.main (./src/main.sql)
 
 Schema hello_world.pub.main
@@ -115,11 +115,11 @@ for metadata we'll attach to columns, but we'll get to that later.
 
 Next let's try `sdf build` to run the query locally.
 
-```bash shell
+```bash
 sdf build
 ```
 
-```bash shell
+```bash
    Building hello_world.pub.main (./src/main.sql)
 
 Table hello_world.pub.main
