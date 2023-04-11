@@ -70,12 +70,18 @@
       ]
     },
     {
-      "group": "",
-      "pages": ["", ""]
+      "group": "SQL Functions",
+      "pages": [
+        "docs/sql-functions/aggregate_functions",
+        "docs/sql-functions/math_functions",
+        "docs/sql-functions/other_expressions",
+        "docs/sql-functions/string_functions",
+        "docs/sql-functions/temporal_functions"
+      ]
     },
     {
-      "group": "",
-      "pages": ["", ""]
+      "group": "Service",
+      "pages": ["docs/service/billing", "docs/service/status"]
     }
   ],
   "footerSocials": {
