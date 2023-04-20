@@ -11,31 +11,15 @@
     "dark": "#0C1D37",
     "anchors": { "from": "#527398", "to": "#2C4A6B" }
   },
-  "topbarLinks": [
-    {
-      "name": "Sign In",
-      "url": "https://www.promise.xyz/"
-    }
-  ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://www.promise.xyz/"
+    "url": "https://console.sdf.com/"
   },
   "anchors": [
     {
-      "name": "API Reference",
+      "name": "Reference",
       "icon": "rectangle-terminal",
-      "url": "api-reference"
-    },
-    {
-      "name": "Changelog",
-      "icon": "list",
-      "url": "https://www.promise.xyz/"
-    },
-    {
-      "name": "Community",
-      "icon": "comments",
-      "url": "https://www.promise.xyz/"
+      "url": "reference"
     }
   ],
   "navigation": [
@@ -52,6 +36,7 @@
         "guide/workspaces",
         "guide/schedules",
         "guide/lineage_metadata",
+        "guide/deployment",
         "guide/authentication"
       ]
     },
@@ -63,21 +48,18 @@
       "group": "Reference",
       "pages": [
         "reference/sdf-cli",
-        "reference/das-yml",
-        "reference/classifier-yml",
-        "reference/policies-yml",
-        "reference/workspace-yml",
-        "reference/sdf-yml"
+        "reference/sdf-yml",
+        "reference/caching"
       ]
     },
     {
       "group": "SQL Functions",
       "pages": [
-        "sql-functions/aggregate_functions",
-        "sql-functions/math_functions",
-        "sql-functions/other_expressions",
-        "sql-functions/string_functions",
-        "sql-functions/temporal_functions"
+        "reference/aggregate_functions",
+        "reference/math_functions",
+        "reference/other_expressions",
+        "reference/string_functions",
+        "reference/temporal_functions"
       ]
     },
     {

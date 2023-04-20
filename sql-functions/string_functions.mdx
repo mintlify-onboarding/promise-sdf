@@ -4,366 +4,365 @@ title: "String Functions"
 
 ## ascii
 
-`ascii(x)` → _int_ Returns the ascii value of the first character given
+   `ascii(x)` → *int*
 
-Example:
+Returns the ascii value of the first character given 
 
-```sql
- select ascii('b') as value; -- value '98'
-```
-
+ 
+Example: 
+```sql 
+ select ascii('b') as value; -- value '98' 
+``` 
 ## bit_length
 
-`bit_length(x)` → _int_ Returns the bit length of the given characters
+   `bit_length(x)` → *int*
 
-Example:
+Returns the bit length of the given characters 
 
-```sql
- select bit_length('b') as value; -- value '8'
-```
-
+ 
+Example: 
+```sql 
+ select bit_length('b') as value; -- value '8' 
+``` 
 ## btrim
 
-`btrim(x, y)` → _varchar_ Trims y from x if x begins with y.
+   `btrim(x, y)` → *varchar*
 
-Example:
+Trims y from x if x begins with y. 
 
-```sql
- select btrim('hello world', 'hello') as value; -- value ' world'
-```
-
+ 
+Example: 
+```sql 
+ select btrim('hello world', 'hello') as value; -- value ' world' 
+``` 
 ## char_length
 
-`char_length(n)` → _int_ Returns the number of characters of n
+   `char_length(n)` → *int*
 
-Example:
+Returns the number of characters of n 
 
-```sql
- select char_length('hello world!') as value; -- value '12'
-```
-
+ 
+Example: 
+```sql 
+ select char_length('hello world!') as value; -- value '12' 
+``` 
 ## character_length
 
-`character_length(n)` → _int_ Returns the number of characters of n
+   `character_length(n)` → *int*
 
-Example:
+Returns the number of characters of n 
 
-```sql
- select character_length('hello world!') as value; -- value '12'
-```
-
+ 
+Example: 
+```sql 
+ select character_length('hello world!') as value; -- value '12' 
+``` 
 ## concat
 
-`concat(array1, array2, ..., arrayN)` → _array_ Concatenates the arrays array1,
-array2, ..., arrayN. This function provides the same functionality as the
-SQL-standard concatenation operator (||).
+   `concat(array1, array2, ..., arrayN)` → *array*
 
-Example:
+Concatenates the arrays array1, array2, ..., arrayN. This function provides the same functionality as the SQL-standard concatenation operator (||). 
 
-```sql
- select concat('hello ', 'world!') as value; -- value 'hello world!'
-```
-
+ 
+Example: 
+```sql 
+ select concat('hello ', 'world!') as value; -- value 'hello world!' 
+``` 
 ## concat_ws
 
-`concat_ws(string0, string1, ...., stringN)` → _array_ Returns the concatenation
-of string1, string2, ..., stringN using string0 as a separator. If string0 is
-null, then the return value is null. Any values provided in the arguments after
-the separator are skipped.
+   `concat_ws(string0, string1, ...., stringN)` → *array*
 
-Example:
+Returns the concatenation of string1, string2, ..., stringN using string0 as a separator. If string0 is null, then the return value is null. Any values provided in the arguments after the separator are skipped. 
 
-```sql
- select concat_ws('|', 'a', 'b') as value; -- value 'a|b'
-```
-
+ 
+Example: 
+```sql 
+ select concat_ws('|', 'a', 'b') as value; -- value 'a|b' 
+``` 
 ## chr
 
-`chr(n)` → _varchar_ Returns the Unicode code point n as a single character
-string.
+   `chr(n)` → *varchar*
 
-Example:
+Returns the Unicode code point n as a single character string. 
 
-```sql
- select chr(61) as value; -- value '='
-```
-
+ 
+Example: 
+```sql 
+ select chr(61) as value; -- value '=' 
+``` 
 ## initcap
 
-`initcap(n)` → _varchar_ Capitalizes the first charcter of the provided string.
-Lower-cases all subsequent characters.
+   `initcap(n)` → *varchar*
 
-Example:
+Capitalizes the first charcter of the provided string. Lower-cases all subsequent characters. 
 
-```sql
- select initcap('a') as value; -- value 'A'
-```
-
+ 
+Example: 
+```sql 
+ select initcap('a') as value; -- value 'A' 
+``` 
 ## left
 
-`left(n, x)` → _varchar_ Returns the left x characters of n
+   `left(n, x)` → *varchar*
 
-Example:
+Returns the left x characters of n 
 
-```sql
- select left('Hello World!', 5) as value; -- value 'Hello'
-```
-
+ 
+Example: 
+```sql 
+ select left('Hello World!', 5) as value; -- value 'Hello' 
+``` 
 ## length
 
-`length(n)` → _int_ Returns the number of characters in n
+   `length(n)` → *int*
 
-Example:
+Returns the number of characters in n 
 
-```sql
- select length('Hello World!') as value; -- value '12'
-```
-
+ 
+Example: 
+```sql 
+ select length('Hello World!') as value; -- value '12' 
+``` 
 ## lower
 
-`lower(n)` → _varchar_ Converts string n to lowercase
+   `lower(n)` → *varchar*
 
-Example:
+Converts string n to lowercase 
 
-```sql
- select lower('Hello World!') as value; -- value 'hello world!'
-```
-
+ 
+Example: 
+```sql 
+ select lower('Hello World!') as value; -- value 'hello world!' 
+``` 
 ## lpad
 
-`lpad(string, size, padstring)` → _varchar_ Left pads string to size characters
-with padstring. If size is less than the length of string, the result is
-truncated to size characters. size must not be negative and padstring must be
-non-empty.
+   `lpad(string, size, padstring)` → *varchar*
 
-Example:
+Left pads string to size characters with padstring. If size is less than the length of string, the result is truncated to size characters. size must not be negative and padstring must be non-empty. 
 
-```sql
- select lpad('😉', 5, '*') as value; -- value '****😉'
-```
-
+ 
+Example: 
+```sql 
+ select lpad('😉', 5, '*') as value; -- value '****😉' 
+``` 
 ## ltrim
 
-`ltrim(string)` → _varchar_ Removes all leading whitespace from string.
+   `ltrim(string)` → *varchar*
 
-Example:
+Removes all leading whitespace from string. 
 
-```sql
- select ltrim('   😉') as value; -- value '😉'
-```
-
+ 
+Example: 
+```sql 
+ select ltrim('   😉') as value; -- value '😉' 
+``` 
 ## md5
 
-`md5(string)` → _varchar_ Computes the md5 hash of string. Md5 is a consistent
-hash.
+   `md5(string)` → *varchar*
 
-Example:
+Computes the md5 hash of string. Md5 is a consistent hash. 
 
-```sql
- select md5('Hello World!') as value; -- value 'ed076287532e86365e841e92bfc50d8c'
-```
-
+ 
+Example: 
+```sql 
+ select md5('Hello World!') as value; -- value 'ed076287532e86365e841e92bfc50d8c' 
+``` 
 ## octet_length
 
-`octet_length(string)` → _int_ Returns the number of bytes of string
+   `octet_length(string)` → *int*
 
-Example:
+Returns the number of bytes of string 
 
-```sql
- select octet_length('Hello World!') as value; -- value '12'
-```
-
+ 
+Example: 
+```sql 
+ select octet_length('Hello World!') as value; -- value '12' 
+``` 
 ## repeat
 
-`repeat(string, n)` → _varchar_ Repeats string n times
+   `repeat(string, n)` → *varchar*
 
-Example:
+Repeats string n times 
 
-```sql
- select repeat('😉', 4) as value; -- value '😉😉😉😉'
-```
-
+ 
+Example: 
+```sql 
+ select repeat('😉', 4) as value; -- value '😉😉😉😉' 
+``` 
 ## replace
 
-`replace(string, search)` → _varchar_ Removes all instances of search from
-string.
+   `replace(string, search)` → *varchar*
 
-Example:
+Removes all instances of search from string. 
 
-```sql
- select replace('Hello There', 'There') as value; -- value 'Hello '
-```
-
+ 
+Example: 
+```sql 
+ select replace('Hello There', 'There') as value; -- value 'Hello ' 
+``` 
 ## replace
 
-`replace(string, search, replace)` → _varchar_ Replaces all instances of search
-with replace in string.
+   `replace(string, search, replace)` → *varchar*
 
-Example:
+Replaces all instances of search with replace in string. 
 
-```sql
- select replace('Hello There', 'There', '😉') as value; -- value 'Hello 😉'
-```
-
+ 
+Example: 
+```sql 
+ select replace('Hello There', 'There', '😉') as value; -- value 'Hello 😉' 
+``` 
 ## reverse
 
-`reverse(string)` → _varchar_ Returns string in reverse order
+   `reverse(string)` → *varchar*
 
-Example:
+Returns string in reverse order 
 
-```sql
- select reverse('Hello There') as value; -- value 'ereht olleH'
-```
-
+ 
+Example: 
+```sql 
+ select reverse('Hello There') as value; -- value 'ereht olleH' 
+``` 
 ## right
 
-`right(n, x)` → _varchar_ Returns the right x characters of n
+   `right(n, x)` → *varchar*
 
-Example:
+Returns the right x characters of n 
 
-```sql
- select right('Hello World!', 6) as value; -- value 'World!'
-```
-
+ 
+Example: 
+```sql 
+ select right('Hello World!', 6) as value; -- value 'World!' 
+``` 
 ## rpad
 
-`rpad(string, size, padstring)` → _varchar_ Right pads string to size characters
-with padstring. If size is less than the length of string, the result is
-truncated to size characters. size must not be negative and padstring must be
-non-empty.
+   `rpad(string, size, padstring)` → *varchar*
 
-Example:
+Right pads string to size characters with padstring. If size is less than the length of string, the result is truncated to size characters. size must not be negative and padstring must be non-empty. 
 
-```sql
- select rpad('😉', 5, '*') as value; -- value '😉****'
-```
-
+ 
+Example: 
+```sql 
+ select rpad('😉', 5, '*') as value; -- value '😉****' 
+``` 
 ## rtrim
 
-`rtrim(string)` → _varchar_ Removes all trailing whitespace from string.
+   `rtrim(string)` → *varchar*
 
-Example:
+Removes all trailing whitespace from string. 
 
-```sql
- select rtrim('😉   ') as value; -- value '😉'
-```
-
+ 
+Example: 
+```sql 
+ select rtrim('😉   ') as value; -- value '😉' 
+``` 
 ## digest
 
-`digest(string, algo)` → byte*array* Processes string with algo. Currently
-supported digest algorithms are md5, sha224, sha256, sha384, sha512, blake2s,
-blake2b, blake3
+   `digest(string, algo)` → byte*array*
 
-Example:
+Processes string with algo. Currently supported digest algorithms are md5, sha224, sha256, sha384, sha512, blake2s, blake2b, blake3 
 
-```sql
- select digest('world', 'md5') as value; -- value '7d793037a0760186574b0282f2f435e7'
-```
-
+ 
+Example: 
+```sql 
+ select digest('world', 'md5') as value; -- value '7d793037a0760186574b0282f2f435e7' 
+``` 
 ## split_part
 
-`split_part(string, delimiter, index)` → _varchar_ Splits string on delimiter
-and returns the field index. Field indexes start with 1. If the index is larger
-than the number of fields, then null is returned.
+   `split_part(string, delimiter, index)` → *varchar*
 
-Example:
+Splits string on delimiter and returns the field index. Field indexes start with 1. If the index is larger than the number of fields, then null is returned. 
 
-```sql
- select split_part('Hello|World', '|', 1) as value; -- value 'Hello'
-```
-
+ 
+Example: 
+```sql 
+ select split_part('Hello|World', '|', 1) as value; -- value 'Hello' 
+``` 
 ## starts_with
 
-`starts_with(string, substring)` → boolean# Tests whether substring is a prefix
-of string
+   `starts_with(string, substring)` → boolean#
 
-Example:
+Tests whether substring is a prefix of string 
 
-```sql
- select starts_with('Hello|World', 'Hello') as value; -- value 'True'
-```
-
+ 
+Example: 
+```sql 
+ select starts_with('Hello|World', 'Hello') as value; -- value 'True' 
+``` 
 ## strpos
 
-`strpos(string, substring)` → _int_ Returns the starting position of the first
-instance of substring in string. Positions start with 1. If not found, 0 is
-returned.
+   `strpos(string, substring)` → *int*
 
-Example:
+Returns the starting position of the first instance of substring in string. Positions start with 1. If not found, 0 is returned. 
 
-```sql
- select strpos('Hello World', 'World') as value; -- value '7'
-```
-
+ 
+Example: 
+```sql 
+ select strpos('Hello World', 'World') as value; -- value '7' 
+``` 
 ## strpos
 
-`strpos(string, substring, instance)` → _int_ Returns the position of the N-th
-instance of substring in string. When instance is a negative number the search
-will start from the end of string. Positions start with 1. If not found, 0 is
-returned.
+   `strpos(string, substring, instance)` → *int*
 
-Example:
+Returns the position of the N-th instance of substring in string. When instance is a negative number the search will start from the end of string. Positions start with 1. If not found, 0 is returned. 
 
-```sql
- select strpos('Hello World World', 'World', 2) as value; -- value '12'
-```
-
+ 
+Example: 
+```sql 
+ select strpos('Hello World World', 'World', 2) as value; -- value '12' 
+``` 
 ## substr
 
-`substr(string, start)` → _varchar_ Returns the rest of string from the starting
-position start. Positions start with 1. A negative starting position is
-interpreted as being relative to the end of the string.
+   `substr(string, start)` → *varchar*
 
-Example:
+Returns the rest of string from the starting position start. Positions start with 1. A negative starting position is interpreted as being relative to the end of the string. 
 
-```sql
- select substr('Hello World', 6) as value; -- value ' World'
-```
-
+ 
+Example: 
+```sql 
+ select substr('Hello World', 6) as value; -- value ' World' 
+``` 
 ## substring
 
-`substring(string, start)` → _varchar_ Returns the rest of string from the
-starting position start. Positions start with 1. A negative starting position is
-interpreted as being relative to the end of the string.
+   `substring(string, start)` → *varchar*
 
-Example:
+Returns the rest of string from the starting position start. Positions start with 1. A negative starting position is interpreted as being relative to the end of the string. 
 
-```sql
- select substring('Hello World', 6) as value; -- value ' World'
-```
-
+ 
+Example: 
+```sql 
+ select substring('Hello World', 6) as value; -- value ' World' 
+``` 
 ## translate
 
-`translate(source, from, to)` → _varchar_ Returns the source string translated
-by replacing characters found in the from string with the corresponding
-characters in the to string. If the from string contains duplicates, only the
-first is used. If the source character does not exist in the from string, the
-source character will be copied without translation. If the index of the
-matching character in the from string is beyond the length of the to string, the
-source character will be omitted from the resulting string.
+   `translate(source, from, to)` → *varchar*
 
-Example:
+Returns the source string translated by replacing characters found in the from string with the corresponding characters in the to string. If the from string contains duplicates, only the first is used. If the source character does not exist in the from string, the source character will be copied without translation. If the index of the matching character in the from string is beyond the length of the to string, the source character will be omitted from the resulting string. 
 
-```sql
- select translate('Hello World', 'Hell', 'N') as value; -- value 'No Word'
-```
-
+ 
+Example: 
+```sql 
+ select translate('Hello World', 'Hell', 'N') as value; -- value 'No Word' 
+``` 
 ## trim
 
-`trim(string)` → _varchar_ Removes leading and trailing whitespace from string.
+   `trim(string)` → *varchar*
 
-Example:
+Removes leading and trailing whitespace from string. 
 
-```sql
- select trim('  😉  ') as value; -- value '😉'
-```
-
+ 
+Example: 
+```sql 
+ select trim('  😉  ') as value; -- value '😉' 
+``` 
 ## upper
 
-`upper(n)` → _varchar_ Converts string n to uppercase
+   `upper(n)` → *varchar*
 
-Example:
+Converts string n to uppercase 
 
-```sql
- select upper('Hello World!') as value; -- value 'HELLO WORLD!'
-```
+ 
+Example: 
+```sql 
+ select upper('Hello World!') as value; -- value 'HELLO WORLD!' 
+``` 
+-------------------------- 

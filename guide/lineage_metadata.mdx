@@ -1,11 +1,11 @@
 ---
-title: "Lineage, Metadata, and Classifier Propagation"
+title: "Lineage & Classifiers"
 description:
   "This documents aims to layout a very important part of SDF and how it can
   benefit your data warehouse."
 ---
 
-SDF's column-level lineage combined with its metadata and classifier propagation
+This documents aims to layout a very important part of SDF and how it can benefit your data warehouse. SDF's column-level lineage combined with its metadata and classifier propagation
 will help you build a data warehouse that is more accurate, easier to maintain,
 and compliant with an evolving data privacy landscape.
 
@@ -14,8 +14,7 @@ and compliant with an evolving data privacy landscape.
 ### Source SQL Files
 
 In SDF, SQL files contain SELECT queries defining each table. Here are a few SQL
-statements we'll be using to demonstrate the concepts in this document. To
-download these and follow along, [TODO: ADD LINK click here](#)
+statements we'll be using to demonstrate the concepts in this document.
 
 ```sql src/source.sql
 select column1 as user_id,
@@ -382,7 +381,7 @@ Here is an example:
 ```yaml src/source.sdf.yml
 table:
   name: source
-  Columns:
+  columns:
     - name: user_id
       classifiers:
         - PII.UID

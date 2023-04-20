@@ -1,133 +1,138 @@
 ---
-title: "Aggregate Functions  "
+title: "Aggregate Functions"
 ---
-
 ## avg
 
-`avg(values)` → _double_ Returns the average (arithmetic mean) of all input
-values.
+   `avg(values)` → *double*
 
-Example:
+Returns the average (arithmetic mean) of all input values.  
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT avg(tbl.column1) AS value FROM tbl; -- value '5.0'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT avg(tbl.column1) AS value FROM tbl; -- value '5.0' 
+``` 
 ## approx_distinct
 
-`approx_distinct(values)` → _double_ Returns the approximate number of distinct
-input values. This function provides an approximation of count(DISTINCT x). Zero
-is returned if all input values are null.
+   `approx_distinct(values)` → *double*
 
-Example:
+Returns the approximate number of distinct input values. This function provides an approximation of count(DISTINCT x). Zero is returned if all input values are null. 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT approx_distinct(tbl.column1) AS value FROM tbl; -- value '3'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT approx_distinct(tbl.column1) AS value FROM tbl; -- value '3' 
+``` 
 ## approx_median
 
-`approx_median(values)` → _double_ Returns the approximate median of input
-values. it is an alias of `approx_percentile_cont(x, 0.5)`
+   `approx_median(values)` → *double*
 
-Example:
+Returns the approximate median of input values. it is an alias of `approx_percentile_cont(x, 0.5)` 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT approx_median(tbl.column1) AS value FROM tbl; -- value '5'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT approx_median(tbl.column1) AS value FROM tbl; -- value '5' 
+``` 
 ## approx_percentile_cont
 
-`approx_percentile_cont(values, p)` → _double_ Returns the approximate
-percentile of input values, where percentile 'p' is between 0 and 1 (inclusive)
+   `approx_percentile_cont(values, p)` → *double*
 
-Example:
+Returns the approximate percentile of input values, where percentile 'p' is between 0 and 1 (inclusive) 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT approx_percentile_cont(tbl.column1, 0.5) AS value FROM tbl; -- value '5'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT approx_percentile_cont(tbl.column1, 0.5) AS value FROM tbl; -- value '5' 
+``` 
 ## approx_percentile_cont_with_weight
 
-`approx_percentile_cont_with_weight(values, p, weight)` → _double_ returns the
-approximate percentile of input values with weight, where the weight column and
-percentile 'p' is a double between 0 and 1 (inclusive)
+   `approx_percentile_cont_with_weight(values, p, weight)` → *double*
 
-Example:
+returns the approximate percentile of input values with weight, where the weight column and percentile 'p' is a double between 0 and 1 (inclusive) 
 
-```sql
- CREATE TABLE tbl AS VALUES (1, 0.5), (5, 0.5), (9, 0.5);
- SELECT approx_percentile_cont_with_weight(tbl.column1, tbl.column2, 0.5) AS value FROM tbl; -- value '7'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1, 0.5), (5, 0.5), (9, 0.5); 
+ SELECT approx_percentile_cont_with_weight(tbl.column1, tbl.column2, 0.5) AS value FROM tbl; -- value '7' 
+``` 
 ## count
 
-`count(values)` → _double_ Returns number of values
+   `count(values)` → *double*
 
-Example:
+Returns number of values 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT count(tbl.column1) AS value FROM tbl; -- value '3'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT count(tbl.column1) AS value FROM tbl; -- value '3' 
+``` 
 ## count_distinct
 
-`count_distinct(values)` → _double_ Returns the unique number of values
+   `count_distinct(values)` → *double*
 
-Example:
+Returns the unique number of values 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (5), (9);
- SELECT count_distinct(tbl.column1) AS value FROM tbl; -- value '3'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (5), (9); 
+ SELECT count_distinct(tbl.column1) AS value FROM tbl; -- value '3' 
+``` 
 ## max
 
-`max(values)` → _double_ Returns the maximum value in the column
+   `max(values)` → *double*
 
-Example:
+Returns the maximum value in the column 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT max(tbl.column1) AS value FROM tbl; -- value '9'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT max(tbl.column1) AS value FROM tbl; -- value '9' 
+``` 
 ## median
 
-`median(values)` → _double_ Returns the median value in the column
+   `median(values)` → *double*
 
-Example:
+Returns the median value in the column 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT median(tbl.column1) AS value FROM tbl; -- value '5'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT median(tbl.column1) AS value FROM tbl; -- value '5' 
+``` 
 ## min
 
-`min(values)` → _double_ Returns the min value in the column
+   `min(values)` → *double*
 
-Example:
+Returns the min value in the column 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT min(tbl.column1) AS value FROM tbl; -- value '1'
-```
-
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT min(tbl.column1) AS value FROM tbl; -- value '1' 
+``` 
 ## sum
 
-`sum(values)` → _double_ Returns the sum of all values in the column
+   `sum(values)` → *double*
 
-Example:
+Returns the sum of all values in the column 
 
-```sql
- CREATE TABLE tbl AS VALUES (1), (5), (9);
- SELECT sum(tbl.column1) AS value FROM tbl; -- value '15'
-```
+ 
+Example: 
+```sql 
+ CREATE TABLE tbl AS VALUES (1), (5), (9); 
+ SELECT sum(tbl.column1) AS value FROM tbl; -- value '15' 
+``` 
+-------------------------- 
 
----
+
