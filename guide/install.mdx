@@ -5,37 +5,16 @@ description:
   required"
 ---
 
-## Prerequisites
-
-SDF is currently supported on the following platforms. The executable is small
-(\<50mb), but heavily parallelized. As such, SDF's resource consumption is
-dependent entirely on your data processing requirements.
-
-| Platforms            | Supported |
-| -------------------- | :-------: |
-| Linux Intel X86-64   |    ✔️     |
-| Linux Arm AARCH-64   |    ✔️     |
-| Apple Intel X86-64   |    ✔️     |
-| Apple Arm AARCh-64   |    ✔️     |
-| Windows Intel X86-64 |    ❌     |
-| Web-Assembly         |    ❌     |
-
-For a complete list of releases, please see the official
-[github releases page](https://github.com/promise-labs/sdf-cli/releases).
-
-<Tip>
-  SDF is hardware optimized. For best performance, download the version that
-  matches your chipset.
-</Tip>
-
 ## Installing SDF
 
 <Tabs>
   <Tab title="Binary Download">
     Our install script will first check your operating system and architecture,
     then install the latest version of SDF and its dependencies for your system.
-    The `sdf` command will also be added to your path. ```bash curl -LSfs
-    https://cdn.sdf.com/releases/download/install.sh | bash -s ```
+    The `sdf` command will also be added to your path. 
+    ```bash 
+    curl -LSfs https://cdn.sdf.com/releases/download/install.sh | bash -s 
+    ```
   </Tab>
 </Tabs>
 
@@ -43,6 +22,9 @@ For a complete list of releases, please see the official
 
 To verify that SDF is installed correctly, run the following command:
 
+```bash
+  sdf --help
+```
 ```bash
 SDF's modular SQL
 
@@ -92,3 +74,26 @@ If you ever need to uninstall SDF, run
 ```bash
 $sdf uninstall
 ```
+
+## Info
+
+SDF is currently supported on the following platforms. The executable is small
+(\<50mb), but heavily parallelized. As such, SDF's resource consumption is
+dependent entirely on your data processing requirements.
+
+| Platforms            | Supported |
+| -------------------- | :-------: |
+| Linux Intel X86-64   |    ✔️     |
+| Linux Arm AARCH-64   |    ✔️     |
+| Apple Intel X86-64   |    ✔️     |
+| Apple Arm AARCh-64   |    ✔️     |
+| Windows Intel X86-64 |    ❌     |
+| Web-Assembly         |    ❌     |
+
+For a complete list of releases, please see the official
+[github releases page](https://github.com/promise-labs/sdf-cli/releases).
+
+<Tip>
+  SDF is hardware optimized. For best performance, download the version that
+  matches your chipset.
+</Tip>

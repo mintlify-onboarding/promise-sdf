@@ -51,7 +51,8 @@
         "guide/io",
         "guide/workspaces",
         "guide/schedules",
-        "guide/lineage_metadata"
+        "guide/lineage_metadata",
+        "guide/authentication"
       ]
     },
     {

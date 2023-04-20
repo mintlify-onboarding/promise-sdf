@@ -12,11 +12,11 @@ description:
 - Learn about SDF's caching logic.
 
 <Tip>
-  Use an editor like Visual Studio Code for better auto-complete and development
-  hints. ::: :::note It is mandatory that you set a default AWS region when
-  working with S3 data. Set the environment variable with `export
-  AWS_DEFAULT_REGION=us-east-1`
+Use an editor like Visual Studio Code for better auto-complete and development hints.
 </Tip>
+<Note>
+It is mandatory that you set a default AWS region when working with S3 data. Set the environment variable with `export AWS_DEFAULT_REGION=us-east-1`
+</Note>
 
 ## Getting Started
 
@@ -34,20 +34,13 @@ hello_world/.gitignore
 ```
 
 ## Describe & View
-
-Let's explore the workspace. Try running `describe`. You'll see the local tables
-like, **popdata** and **world_metrics** and the remote tables specified in the
-cloud. You'll also see the raw CSV data file under /local/popdata.csv.
-Internally SDF has learned the schema of the tables from the CSV header and SQL
-statements. SDF has also generated the dependecy graph for this workspace, in
-this case only for these two tables.
+Let's explore the workspace. Try running `describe`. You'll see the local tables like, **popdata** and **world_metrics** and the remote tables specified in the cloud. You'll also see the raw CSV data file under /local/popdata.csv. Internally SDF has learned the schema of the tables from the CSV header and SQL statements. SDF has also generated the dependecy graph for this workspace, in this case only for these two tables.
 
 ```bash
 sdf describe
 ```
 
-You will see numerous table definitions, including column_name, datatype, and
-classifiers. This is your workspace. Feel free to add new
+You will see numerous table definitions, including column_name, datatype, and classifiers. This is your workspace.
 
 ### View
 
