@@ -1,5 +1,6 @@
 {
-  "name": "Promise",
+  "name": "SDF",
+  "sidebarDescription": "Docs for the Semantic Data Fabric",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
